@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DecodeLabs — Responsive Web Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="#" class="logo" aria-label="DecodeLabs home">
+          <span class="logo__dot"></span>
+          <span class="logo__text">Decode<strong>Labs</strong></span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link site-nav__link--active" href="#">Home</a></li>
+            <li><a class="site-nav__link" href="#about">About</a></li>
+            <li><a class="site-nav__link" href="#concepts">Concepts</a></li>
+            <li><a class="site-nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hamburger — Popover API, No JS -->
+        <button class="hamburger" popovertarget="mob-menu" aria-label="Open menu">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar hamburger__bar--short"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile nav popover -->
+    <nav id="mob-menu" class="mob-nav" popover aria-label="Mobile navigation">
+      <div class="mob-nav__head">
+        <span class="mob-nav__brand">DecodeLabs</span>
+        <button class="mob-nav__close" popovertarget="mob-menu" popovertargetaction="hide" aria-label="Close menu">&#x2715;</button>
+      </div>
+      <ul class="mob-nav__list">
+        <li><a class="mob-nav__link" href="#" popovertarget="mob-menu" popovertargetaction="hide">Home</a></li>
+        <li><a class="mob-nav__link" href="#about" popovertarget="mob-menu" popovertargetaction="hide">About</a></li>
+        <li><a class="mob-nav__link" href="#concepts" popovertarget="mob-menu" popovertargetaction="hide">Concepts</a></li>
+        <li><a class="mob-nav__link" href="#contact" popovertarget="mob-menu" popovertargetaction="hide">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <!-- ===== HERO ===== -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container hero__inner">
+          <div class="hero__kicker">Project 2 &nbsp;/&nbsp; Batch 2026</div>
+          <h1 class="hero__heading" id="hero-heading">
+            The Art of<br />
+            <em>Fluidity.</em>
+          </h1>
+          <div class="hero__aside">
+            <p class="hero__subtext">
+              Responsive Web Layout — building architectures
+              that flow from desktop to mobile without breaking.
+              62.73% of all traffic is mobile. Design for it first.
+            </p>
+            <a href="#about" class="btn">Start Exploring ↓</a>
+          </div>
+        </div>
+        <div class="hero__ticker" aria-hidden="true">
+          <div class="hero__ticker-track">
+            <span>Mobile First</span><span>·</span>
+            <span>CSS Grid</span><span>·</span>
+            <span>Flexbox</span><span>·</span>
+            <span>Media Queries</span><span>·</span>
+            <span>clamp()</span><span>·</span>
+            <span>Fluid Units</span><span>·</span>
+            <span>Popover API</span><span>·</span>
+            <span>WCAG Compliant</span><span>·</span>
+            <span>Mobile First</span><span>·</span>
+            <span>CSS Grid</span><span>·</span>
+            <span>Flexbox</span><span>·</span>
+            <span>Media Queries</span><span>·</span>
+            <span>clamp()</span><span>·</span>
+            <span>Fluid Units</span><span>·</span>
+            <span>Popover API</span><span>·</span>
+            <span>WCAG Compliant</span><span>·</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT / GOAL ===== -->
+      <section class="section" id="about" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="split-layout">
+            <div class="split-layout__left">
+              <p class="eyebrow">The Goal</p>
+              <h2 class="heading-xl" id="about-heading">
+                Build once.<br />Work everywhere.
+              </h2>
+            </div>
+            <div class="split-layout__right">
+              <p class="body-lg">
+                Project 2 is your adaptability phase. Before complex interactive
+                components, you must master CSS Media Queries and deliver a
+                professional experience on any device — through pure responsive logic.
+              </p>
+              <div class="stat-row">
+                <div class="stat">
+                  <span class="stat__number">62.73%</span>
+                  <span class="stat__label">Mobile web traffic globally</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__number">3</span>
+                  <span class="stat__label">Breakpoint tiers to master</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__number">0<span class="stat__unit">js</span></span>
+                  <span class="stat__label">JavaScript needed for nav</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHECKLIST ===== -->
+      <section class="section section--teal" aria-labelledby="checklist-heading">
+        <div class="container">
+          <p class="eyebrow eyebrow--light">Implementation Checklist</p>
+          <h2 class="heading-xl heading-xl--light" id="checklist-heading">
+            Six things that must ship.
+          </h2>
+          <ol class="checklist">
+            <li class="checklist__item">
+              <span class="checklist__num">01</span>
+              <div class="checklist__content">
+                <h3 class="checklist__title">Viewport Meta Tag</h3>
+                <p class="checklist__desc"><code>width=device-width, initial-scale=1</code> — the key to the kingdom. Without it, mobile browsers render at 980px virtual width.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__num">02</span>
+              <div class="checklist__content">
+                <h3 class="checklist__title">Mobile-First Base CSS</h3>
+                <p class="checklist__desc">Write all base styles for the smallest screen first. Enhance upward with <code>@media (min-width: …)</code>.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__num">03</span>
+              <div class="checklist__content">
+                <h3 class="checklist__title">Grid (Macro) + Flexbox (Micro)</h3>
+                <p class="checklist__desc">CSS Grid places major page sections. Flexbox aligns items inside each component. Right tool, right job.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__num">04</span>
+              <div class="checklist__content">
+                <h3 class="checklist__title">Fluid Units</h3>
+                <p class="checklist__desc"><code>%</code>, <code>rem</code>, <code>vw</code>, and <code>clamp()</code> everywhere. No fixed pixel widths on layout containers.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__num">05</span>
+              <div class="checklist__content">
+                <h3 class="checklist__title">Hamburger / Popover Navigation</h3>
+                <p class="checklist__desc">Desktop nav collapses to a hamburger on mobile. Uses the HTML Popover API — zero JavaScript required.</p>
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__num">06</span>
+              <div class="checklist__content">
+                <h3 class="checklist__title">Accessible Touch Targets &amp; Zoom</h3>
+                <p class="checklist__desc">All interactive elements are at least 44×44px. Never disable user zoom — allow up to 500% magnification.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===== CONCEPTS GRID ===== -->
+      <section class="section section--offwhite" id="concepts" aria-labelledby="concepts-heading">
+        <div class="container">
+          <p class="eyebrow">Core Concepts</p>
+          <h2 class="heading-xl" id="concepts-heading">The techniques.</h2>
+          <div class="concepts-grid">
+
+            <article class="concept">
+              <div class="concept__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&h=420&fit=crop"
+                  alt="Code editor showing mobile-first CSS with media queries"
+                  width="700" height="420" loading="lazy"
+                  class="concept__img"
+                />
+              </div>
+              <div class="concept__meta">
+                <span class="concept__tag">Strategy</span>
+                <h3 class="concept__title">Mobile-First</h3>
+                <p class="concept__body">Base CSS targets the smallest viewport. Complexity increases with space. The pyramid: Mobile Core → Tablet → Desktop (High-Res).</p>
+              </div>
+            </article>
+
+            <article class="concept">
+              <div class="concept__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&h=420&fit=crop"
+                  alt="Developer writing CSS grid layout code on a laptop"
+                  width="700" height="420" loading="lazy"
+                  class="concept__img"
+                />
+              </div>
+              <div class="concept__meta">
+                <span class="concept__tag">Layout</span>
+                <h3 class="concept__title">Grid + Flexbox Harmony</h3>
+                <p class="concept__body">Grid is the house — macro page structure. Flexbox is the furniture — micro component alignment. Use <code>auto-fit</code> + <code>minmax()</code> for intrinsically responsive grids.</p>
+              </div>
+            </article>
+
+            <article class="concept">
+              <div class="concept__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=700&h=420&fit=crop"
+                  alt="Wireframes for a responsive webpage across multiple device sizes"
+                  width="700" height="420" loading="lazy"
+                  class="concept__img"
+                />
+              </div>
+              <div class="concept__meta">
+                <span class="concept__tag">Typography</span>
+                <h3 class="concept__title">Fluid Typography</h3>
+                <p class="concept__body">Use <code>clamp(1rem, 2.5vw, 2rem)</code> for smooth, continuous font scaling — no sudden jumps at breakpoints. Modern over traditional.</p>
+              </div>
+            </article>
+
+            <article class="concept">
+              <div class="concept__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&h=420&fit=crop"
+                  alt="Close-up of a thumb using a smartphone touchscreen"
+                  width="700" height="420" loading="lazy"
+                  class="concept__img"
+                />
+              </div>
+              <div class="concept__meta">
+                <span class="concept__tag">Touch UX</span>
+                <h3 class="concept__title">Designing for Thumbs</h3>
+                <p class="concept__body">Every interactive element meets the 44×44px minimum touch target size. The finger is less precise than a mouse — design for it first.</p>
+              </div>
+            </article>
+
+            <article class="concept">
+              <div class="concept__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&h=420&fit=crop"
+                  alt="Multiple screen sizes showing a fluid, adaptive web layout"
+                  width="700" height="420" loading="lazy"
+                  class="concept__img"
+                />
+              </div>
+              <div class="concept__meta">
+                <span class="concept__tag">Breakpoints</span>
+                <h3 class="concept__title">Bridges, Not Fences</h3>
+                <p class="concept__body">Design for content breakage, not device models. Break at <em>480px</em>, <em>768px</em>, <em>1024px</em> — wherever your layout starts to struggle.</p>
+              </div>
+            </article>
+
+            <article class="concept">
+              <div class="concept__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&h=420&fit=crop"
+                  alt="Accessibility WCAG compliance audit report on a tablet screen"
+                  width="700" height="420" loading="lazy"
+                  class="concept__img"
+                />
+              </div>
+              <div class="concept__meta">
+                <span class="concept__tag">A11Y</span>
+                <h3 class="concept__title">Accessibility is Non-Negotiable</h3>
+                <p class="concept__body">Allow up to 500% zoom. Never use <code>user-scalable=no</code>. WCAG compliance means every person on every device can use your product.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== QUOTE ===== -->
+      <section class="quote-section" aria-label="Project mandate">
+        <div class="container">
+          <blockquote class="big-quote">
+            <span class="big-quote__mark">"</span>
+            <p class="big-quote__text">Coding for the device that hasn't been invented yet.</p>
+            <footer class="big-quote__footer">
+              — DecodeLabs &nbsp;|&nbsp; Engineering Foundations
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="contact">
+      <div class="container site-footer__grid">
+
+        <div class="site-footer__brand">
+          <p class="footer-logo">Decode<strong>Labs</strong></p>
+          <p class="site-footer__tagline">Batch 2026 · Industrial Training Kit</p>
+          <p class="site-footer__desc">
+            Empowering the next generation of frontend developers through
+            hands-on, real-world project-based learning.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-col-title">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a class="footer-links__item" href="#">Home</a></li>
+            <li><a class="footer-links__item" href="#about">About</a></li>
+            <li><a class="footer-links__item" href="#concepts">Concepts</a></li>
+            <li><a class="footer-links__item" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Get In Touch</h3>
+          <address class="footer-contact">
+            <p class="footer-contact__row">
+              <span class="footer-contact__label">Phone</span>
+              <a class="footer-contact__val" href="tel:+918933006408">+91 89330 06408</a>
+            </p>
+            <p class="footer-contact__row">
+              <span class="footer-contact__label">Email</span>
+              <a class="footer-contact__val" href="mailto:decodelabs.tech@gmail.com">decodelabs.tech@gmail.com</a>
+            </p>
+            <p class="footer-contact__row">
+              <span class="footer-contact__label">Web</span>
+              <a class="footer-contact__val" href="https://www.decodelabs.tech" target="_blank" rel="noopener noreferrer">www.decodelabs.tech</a>
+            </p>
+            <p class="footer-contact__row">
+              <span class="footer-contact__label">Location</span>
+              <span class="footer-contact__val">Greater Lucknow, India</span>
+            </p>
+          </address>
+        </div>
+
+      </div>
+      <div class="site-footer__bottom">
+        <div class="container">
+          <p class="site-footer__copy">© 2026 DecodeLabs · Project 2 — Responsive Web Layout</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
